@@ -3,11 +3,63 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-color: var(--bg-color);
+  background-image: url(/images/cover-image-dark.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .header {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  min-block-size: 768px;
+  /*background-image: url(/images/cover-image-dark.png);*/
+  background-size: cover;
+  background-position: center;
+}
+
+.header::after,
+.header::before {
+  content: '';
+  block-size: 25px;
+  inline-size: 25px;
+  position: absolute;
+  display: inline-block;
+}
+
+.header::before {
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.header::after {
+  bottom: 20px;
+  left: 20px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__decoration-text {
+  position: absolute;
+  right: 29px;
+  top: 20px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+
+}
+
+.header__decoration-text::after {
+  content: "";
+  display: inline-block;
+  inline-size: 9px;
+  block-size: 9px;
+  background-color: var(--accent-color);
+  margin: 0 0 2px 10px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px;
 }
 
 .header__theme-menu-list {
@@ -22,12 +74,27 @@
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   border: none;
-  text-transform: lowercase
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.4);
+  padding-top: 0;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid #ff0070;
+  border: 1px solid var(--accent-color);
   padding-top: 0;
+  pointer-events: none;
 }
 
 .header__title {
@@ -37,11 +104,15 @@
   text-align: left;
 }
 
-.header__description {
+.title-decor {
   background-color: var(--accent-color);
   color: var(--bg-color);
+}
+
+.header__description {
   font-weight: 700;
   inline-size: 491px;
   justify-self: end;
-  align-self: flex-end;
+  align-self: flex-start;
+  margin-right: 20px;
 }
