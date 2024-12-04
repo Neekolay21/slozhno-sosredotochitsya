@@ -25,19 +25,27 @@
 */
 
 .page.theme_dark {
-  --main-font: 'IBM Plex Mono';
   --bg-image: url(../images/cover-image-dark.png);
-  --bg-color: #000028;
+  --bg-color: #FF0070;
   --text-color: #f1b2ce;
   --accent-color: #FF0070;
+  --title-color: #db00ff;
+  --title-shadow-color: #FF0070;
+  --title-decor-color: #000028;
+  --button-color: #FF0070;
+  --button-border-color: #FF007066;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-font: 'IBM Plex Mono';
     --bg-image: url(../images/cover-image-dark.png);
-    --bg-color: #000028;
+    --bg-color: #FF0070;
     --text-color: #f1b2ce;
     --accent-color: #FF0070;
+    --title-color: #db00ff;
+    --title-shadow-color: #FF0070;
+    --title-decor-color: #000028;
+    --button-color: #FF0070;
+    --button-border-color: #FF007066;
   }
 }
