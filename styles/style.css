@@ -7,6 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: auto;
 }
 
 
@@ -165,11 +166,28 @@
 
   .header__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    margin-left: 10px;
   }
 
   .header__description {
     width: clamp(355px, 50%, 364px);
     align-self: center;
+    justify-self: center;
+  }
+
+  .header__decoration-text {
+    right: 19px;
+    top: 10px;
+  }
+
+  .header::before {
+    top: 10px;
+    right: 10px;
+  }
+
+  .header::after {
+    bottom: 10px;
+    left: 10px;
   }
 }
 
@@ -281,6 +299,34 @@ main {
   }
 }
 
+@media (375px <= width < 768px) {
+  .concentration {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: 1fr;
+    margin-top: 50px;
+  }
+  
+  .concentration__title {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .concentration__acticle-multitasking {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .concentration__acticle-food {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .concentration__acticle-devices {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+}
+
 .goldenFish {
   margin-top: 80px;
 }
@@ -337,6 +383,54 @@ main {
   grid-row: 3;
 }
 
+@media (375px <= width < 768px) {
+  .goldenFish {
+    margin-top: 50px;
+  }
+  
+  .goldenFish-advices {
+    grid-template-columns: 1fr;
+  }
+
+  .goldenFish-container {
+    margin-top: 20px;
+  }
+
+  .gallery {
+    margin-top: 50px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+  }
+  
+  .gallery-image:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .gallery-image:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  
+  .gallery-image:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .gallery-image:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  
+  .gallery-image:nth-child(5) {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -373,4 +467,11 @@ main {
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--title-shadow-color);
+}
+
+@media (375px <= width < 768px) {
+  .footer-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-align: center;
+  }
 }
