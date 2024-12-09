@@ -10,32 +10,10 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  /*
-  background-image: url(/images/cover-image-light.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  block-size: 100%;
-}
-
-:root.theme-light {
-  --text-color: #353430;
-  --bg-color: #fff1f7;
-  --accent-color: #ff8dcb;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --text-color: #353430;
-    --bg-color: #fff1f7;
-    --accent-color: #ff8dcb;    
-    }
-}
-*/
 
 .page.theme_light {
   --bg-image: url(../images/cover-image-light.png);
+  --bg-page-color: #fff1f7;
   --bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #FF8DCB;
@@ -49,6 +27,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-image: url(../images/cover-image-light.png);
+    --bg-page-color: #fff1f7;
     --bg-color: #fff1f7;
     --text-color: #353430;
     --accent-color: #FF8DCB;

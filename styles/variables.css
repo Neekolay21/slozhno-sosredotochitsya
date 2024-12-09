@@ -13,6 +13,7 @@
 
 :root {
   --bg-image: url(../images/cover-image-dark.png);
+  --bg-page-color: #000028;
   --bg-color: #FF0070;
   --text-color: #f1b2ce;
   --accent-color: #FF0070;

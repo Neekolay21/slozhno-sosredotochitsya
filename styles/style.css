@@ -3,6 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   background-image: var(--bg-image);
+  background-color: var(--bg-page-color);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,7 +44,7 @@
 .header__decoration-text {
   position: absolute;
   right: 29px;
-  top: 20px;
+  top: 21px;
   text-transform: uppercase;
   color: var(--bg-color);
   cursor: default;
@@ -137,7 +138,7 @@
   .header__theme-menu {
     align-self: center;
     margin-right: 27px;
-    padding-top: 193px;
+    padding-top: 191px;
   }
 
   .header__theme-menu-list {
@@ -149,7 +150,7 @@
 
   .header__title {
     align-self: center;
-    padding-top: 148px;
+    padding-top: 150px;
   }
 
   .header__description {
